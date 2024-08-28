@@ -1,0 +1,60 @@
+﻿@page
+@model ApiProyecto.Plantillas.correoModel
+@{
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ejemplo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 30px 30px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido, <span id="nombreUsuario">#nombre#</span>!</h1>
+        <p>Solicitaste restablecer tu password, este token tiene una duracion maxima de 24 horas</p>
+        <p>Presiona el Boton para restablecer tu password</p>
+       
+        <a class="button" href="https://localhost:44344/Token/token?correo=#correo#&token=#token#">Token</a>
+    </div>
+    
+   
+</body>
+</html>
